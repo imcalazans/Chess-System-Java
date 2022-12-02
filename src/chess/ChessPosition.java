@@ -28,7 +28,7 @@ public class ChessPosition {
 	}
 	
 	protected static ChessPosition fromPosition(int rows, int columns) {
-		return new ChessPosition((char)(columns+'a'), rows+8);
+		return new ChessPosition((char)(columns +'a'), rows + 8);
 	}
 	
 	@Override
