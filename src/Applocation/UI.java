@@ -3,6 +3,7 @@ package Applocation;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
 import chess.Color;
@@ -45,6 +46,13 @@ public class UI {
 		} catch (RuntimeException e) {
 			throw new InputMismatchException("Error reading ChesssPossition: Valiv values are from a1 to h8");
 		}
+	}
+	
+	public static void printMatch(ChessMatch chessMatch) {
+		printBoard(chessMatch.getPiece());
+		System.out.println();
+		System.out.println("Turn: " + chessMatch.getTurn());
+		System.out.println("Waiting Player: "+ chessMatch.getcurrentPlayer());
 	}
 
 	public static void printBoard(ChessPiece[][] pieces) {
